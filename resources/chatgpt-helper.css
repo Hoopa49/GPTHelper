@@ -1,0 +1,286 @@
+/* Основные стили для html и body */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e; /* Темная тема VS Code */
+  color: #d4d4d4; /* Светлый серый текст */
+  padding: 3px;
+  overflow: hidden;
+}
+
+/* Элемент загрузки */
+#loading {
+  display: none;
+  color: var(
+    --neon-green,
+    #00ff00
+  ); /* Зеленый неон для выделения состояния загрузки */
+  font-size: 0.9em;
+}
+
+/* Ответ и контейнер ответа */
+#response {
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #3a3a3a;
+  background-color: #2d2d2d;
+  color: var(--neon-green, #00ff00);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.response-container,
+.chat-container,
+.user-input {
+  flex-grow: 1;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* Стили для скроллбара */
+.response-container::-webkit-scrollbar,
+.chat-container::-webkit-scrollbar,
+.user-input::-webkit-scrollbar {
+  width: 5px;
+}
+
+.response-container::-webkit-scrollbar-track,
+.chat-container::-webkit-scrollbar-track,
+.user-input::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #2d2d2d;
+  border-radius: 5px;
+}
+
+.response-container::-webkit-scrollbar-thumb,
+.chat-container::-webkit-scrollbar-thumb,
+.user-input::-webkit-scrollbar-thumb {
+  background-color: #ff9900;
+  border-radius: 3px;
+}
+
+.response-container::-webkit-scrollbar-button,
+.chat-container::-webkit-scrollbar-button,
+.user-input::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Секция файлов */
+#fileSection {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+#fileList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px; /* Добавлено для лучшего отступа */
+  padding: 5px;
+  background-color: #1e1e1e; /* Сделано видимым для файлов */
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: #d4d4d4;
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  font-size: 0.6em;
+  position: relative;
+  padding-right: 20px;
+}
+
+.file-item span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.file-item .file-icon {
+  width: 10px;
+  height: 10px;
+}
+
+.file-item button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.file-item button img {
+  width: 12px;
+  height: 12px;
+}
+
+/* Кнопки и элементы взаимодействия */
+#analyzeAndChat,
+#selectFiles {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-top: 3px;
+  transition: filter 0.3s;
+}
+
+#analyzeAndChat:hover,
+#selectFiles:hover {
+  filter: brightness(1.5);
+}
+
+#analyzeAndChat.animated {
+  animation: rotateAnimation 0.6s infinite linear;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Изменения для размещения textarea и кнопок на одном уровне */
+#inputContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 3px;
+}
+
+textarea {
+  background-color: #2d2d2d; /* Темный фон для текстового поля */
+  color: var(--neon-green, #00ff00); /* Зеленый неон для текста запроса */
+  border: 1px solid #3a3a3a;
+  border-radius: 5px;
+  padding: 5px;
+  flex-grow: 1;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  resize: none;
+  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  overflow-y: auto;
+  overflow-y: hidden; /* Отключение изменения размера текстового поля при вводе текста */
+}
+
+h1 {
+  color: #9b30ff;
+  font-weight: normal;
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 23px;
+  text-align: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+h1 span {
+  color: var(--neon-green, #00ff00);
+}
+
+.separator-top,
+.separator-bottom {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 1px 0;
+}
+
+.chat-message {
+  margin-bottom: 3px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background-color: #2d2d2d;
+  color: var(--neon-green, #00ff00);
+  text-align: right;
+}
+
+.chat-message.assistant {
+  align-self: flex-start;
+  background-color: #2d2d2d;
+  color: #9b30ff;
+  text-align: left;
+}
+
+.code-container {
+  border: 1px solid #444;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+pre.code-block {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 10px;
+  margin: 0;
+  overflow-x: auto;
+  text-align: left;
+  max-width: 100%;
+}
+
+.copy-button {
+  background-color: var(--neon-green, #00ff00);
+  color: #000;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.copy-button:hover {
+  background-color: #9b30ff;
+}

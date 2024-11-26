@@ -1,0 +1,91 @@
+{
+"invoice": "<?xml version= \"1.0\" encoding= \"UTF-8\"?>
+<invoiceDirectLoad>
+<invTypeID value= \"1\" \ />
+<invSendKindID value= \"4\" \ />
+<invBlankType value= \"94\" \ />
+<invClaimID value= \"1551598237\" \ />
+<invOtprNum value= \"4\" \ />
+<invPodNum value= \"6\" \ />
+<invSenderID value= \"44036\" \ />
+<invRecipID value= \"282301\" \ />
+<invRecipAddressID value= \"0\" \ />
+<invRecipAddress value= \"127644, Г.МОСКВА , Москва, Вагоноремонтная - 10А, тел: 4959330945\" \ />
+<invRecipTGNL value= \"2416\" \ />
+<invFromStationCode value= \"023801\" \ />
+<invFromCountryCode value= \"643\" \ />
+<invFromLoadWay value= \"1\" \ />
+<invToStationCode value= \"237806\" \ />
+<invToCountryCode value= \"643\" \ />
+<invToLoadWay value= \"АО ДСК №7\" \ />
+<invSendSpeedID value= \"2\" \ />
+<invPlanCarTypeID value= \"60\" \ />
+<invPlanCarCount value= \"10\" \ />
+<invPlanCarOwnerTypeID value= \"1\" \ />
+<invNTU_MTU_ID value= \"578971\" \ />
+<invNTU_MTUNumber value= \"2412\/р от 14.11.18\" \ />
+<invPayPlaceID value= \"3\" \ />
+<invPayFormID value= \"99\" \ />
+<invPayerCode value= \"1003441430\" \ />
+<invRespPerson value= \"Ответственный за работу с ЖД Федотова Л.В.\" \ />
+<invDeplPerson value= \"мастер ждц Дёмин Николай Михайлович\" \ />
+<invLoadTypeID value= \"1\" \ />
+<invLoadAssetsID value= \"1\" \ />
+<invScaleTypeID value= \"19\" \ />
+<invScalePersonID value= \"2\" \ />
+<invScalePrecision value= \"2\" \ />
+<invDepNormDocID value= \"3\" \ />
+<invAdditionalCond value= \"Местные технические условия\/2412\/р от 14.11.18 (АСКМ) Дата утверждения: 14.11.2018; МТУ№2412\/р от 14.11.2018г рисунок 2 схема е\nмастер ждц Дёмин Николай Михайлович\" \ />
+<invFreight>\n
+<freightCode value= \"232431\" \ />\n
+<freightExactName value= \"ЩЕБЕНЬ, НЕ ПОИМЕНОВАННЫЙ В АЛФАВИТЕ фр.5-20 не мытый\" \ />\n \n
+<freightPackTypeID value= \"25\" \ />\n
+<freightWeight value= \"69000\" \ />\n \n \n
+<freightDangerSignID value= \"1\" \ />\n
+<freightAdditional value= \"123\" \ />\n \n
+<freightCLS>
+<clsTranspClauseID value= \"800\" \ />
+<clsCustomText value= \"ТЕСТ\" \ />
+<\/freightCLS>\n
+<\/invFreight>
+<invFreightWeight>
+<freightCode value= \"232431\" \ />
+<freightRealWeight value= \"69500\" \ />
+<\/invFreightWeight>
+<invSPC>\n
+<spcTranspClauseID value= \"1\" \ />\n
+<spcCustomText value= \"Все претензии по несоответствию массы груза разрешаются без участия перевозчика. Груз щебень не мытыйПроведены проф. меры против смерзаемости груза путём перелопачивания груза ковшом погрузчика .Для ООО ТСК\" \ />\n \n \n \n \n \n \n \n \n \n \n \n \n
+<\/invSPC>
+<invSPC>\n
+<spcTranspClauseID value= \"927\" \ />\n \n \n \n \n \n \n \n \n \n \n \n \n \n
+<\/invSPC>
+<invSPC>\n
+<spcTranspClauseID value= \"78\" \ />\n \n \n \n \n \n \n \n \n \n \n \n \n \n
+<\/invSPC>
+<invCar>
+<carNumber value= \"62149570\" \ />
+<carOwnerTypeID value= \"1\" \ />
+<carOwnerID value= \"177004\" \ />
+<carTenantID value= \"556591\" \ />
+<carWeightDep value= \"237\" \ />
+<carWeightDepReal value= \"230\" \ />
+<carWeightGross value= \"93200\" \ />
+<carWeightNet value= \"69500\" \ />
+<carCSL>\n
+<spcTranspClauseID value= \"17\" \ />\n
+<sealMarks value= \"РЖД8888888\" \ />\n \n
+<sealYear value= \"2024\" \ />\n
+<sealOwnerTypeID value= \"2\" \ />\n
+<sealRailwayID value= \"3\" \ />\n
+<\/carCSL>
+<\/invCar>
+<useCarNSI \ />
+<useMod11 \ />
+<useCarNSI \ />
+<useContNSI \ />
+<usePrimaryCarNSI \ />
+<notState \ />
+<useValid \ />
+<useWarning \ />
+<\/invoiceDirectLoad>"
+}

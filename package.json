@@ -1,0 +1,67 @@
+{
+  "name": "chatgpt-helper",
+  "displayName": "ChatGPT Helper",
+  "description": "Плагин для интеграции с ChatGPT",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "chatgpt-helper.helloWorld",
+        "title": "ChatGPT: Say Hello"
+      },
+      {
+        "command": "chatgpt-helper.openView",
+        "title": "ChatGPT: Open Helper View"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "chatgpt-helper",
+          "title": "ChatGPT Helper",
+          "icon": "resources/chatgpt-icon.png"
+        }
+      ]
+    },
+    "views": {
+      "chatgpt-helper": [
+        {
+          "type": "webview",
+          "id": "chatgpt-helper.chatgptView",
+          "name": "ChatGPT View"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "watch": "webpack --watch",
+    "compile": "webpack",
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node-fetch": "^2.6.12",
+    "@types/vscode": "^1.95.0",
+    "@vscode/test-electron": "^2.4.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "minimatch": "^3.0.5",
+    "minimist": "^1.2.8",
+    "mkdirp": "^3.0.1",
+    "mocha": "^10.8.2",
+    "node-fetch": "^3.3.2"
+  }
+}
